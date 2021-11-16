@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import dao.CategoriaDao;
+import model.Categoria;
 import utils.ConnectionFactory;
 
  public class ViewList{
@@ -14,7 +15,9 @@ import utils.ConnectionFactory;
             
             CategoriaDao dao = new CategoriaDao(conn);
 
-            dao.list().forEach(c->System.out.println());
+            for (Categoria c : dao.list()) {
+                System.out.println(c);
+             }
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block

@@ -10,7 +10,7 @@ public class ViewDelete {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {           
             CategoriaDao dao = new CategoriaDao(conn);
-            int linhasAfetadas = dao.delete(4); 
+            int linhasAfetadas = dao.delete(11); 
 
             System.out.println("O número de linhas afetadas foi: " + linhasAfetadas);
 

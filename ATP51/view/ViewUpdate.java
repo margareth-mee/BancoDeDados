@@ -12,7 +12,7 @@ public class ViewUpdate {
         try(Connection conn = new ConnectionFactory().getConnection()) {
                        
             CategoriaDao dao  = new CategoriaDao(conn);
-            Categoria model = new Categoria(3, "TesteUpdate");
+            Categoria model = new Categoria(11, "TesteUpdate");
             int linhasAfetadas = dao.update(model);
             System.out.println("O número de linhas afetadas foi: " + linhasAfetadas);
 
